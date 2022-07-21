@@ -1,0 +1,146 @@
+.header{
+  position:sticky;
+  top:0;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.header__itemContainer{
+  margin-inline:auto;
+  width:min(95%,80em);
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+.header__left{
+  display:flex;
+  column-gap:1
+}
+.header__right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width:100vw;
+  opacity: 0.8;
+}
+.header__nav{
+  visibility: hidden;
+}
+.header__nav.open{
+  visibility:visible;
+}
+.header__listContainer{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  overflow: hidden;
+  background-color:white;
+  padding-right: 1rem;
+  transform: translateY(-100%);
+  transition:all 0.4s ease-in-out;
+}
+.header__listContainer.open{
+  transform: translateY(0);
+}
+
+.header__listItem{
+  list-style-type:none;
+  transform: translate(100vw);
+  transition:all 0.4s ease-in-out; 
+}
+.header__listItem.open{
+  transform:translateX(0)
+}
+.header__link{
+  display: inline-block;
+  font-size: 2rem;
+  padding: 2rem 0;
+  font-weight: 300;
+  transition:all 0.4s ease-in-out;
+  text-decoration:none;
+  color:var(--text-color);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+}
+.header__bar{
+  right:0;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 26px;
+  cursor: pointer;
+  transition:all 0.4s ease-in-out;
+}
+.header__bar--burger{
+  position: absolute;
+  top: 45%;
+  width: 26px;
+  height: 3px;
+  background-color:var(--title-text-color);
+  transition:all 0.4s ease-in-out;
+}
+.header__bar--burger::before{
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 0;
+  width: 20px;
+  height: 3px;
+  background-color:var(--title-text-color);
+  transition:all 0.4s ease-in-out;
+}
+.header__bar--burger::after{
+  content: '';
+  position: absolute;
+  top: 6px;
+  right:0;
+  width: 20px;
+  height: 3px;
+  background-color:var(--title-text-color);
+  transition:all 0.4s ease-in-out;
+}
+
+.header__bar--burger.open {
+  transform: rotate(720deg);
+}
+.header__bar--burger.open::before{
+  width:28px;
+  transform: rotate(90deg) translate(8px, 0);
+}
+.header__bar--burger.open::after{
+  background-color: transparent;
+}
+@media screen and (min-width: 768px){
+  .header__bar{
+    display:none;
+  }
+  .header__right{
+    margin-left:auto;
+    position: unset;
+    width: fit-content;
+    opacity: 1;
+  }
+  .header__nav{
+    visibility:visible;
+  }
+  .header__listContainer{
+    height: unset;
+    transform: translateY(0);
+    flex-flow: row wrap;
+    column-gap: 1em;
+    align-items: center;
+  }
+  .header__listItem{
+    transform: translate(0);
+  }
+  .header__link{
+    font-size: 1.2rem;
+    padding:unset;
+  }
+  
+  
+}
+/* / *  Don't add any code here. Let it be inside your folder This is for Mr Tobi. Don't tamper with his code*/ */
