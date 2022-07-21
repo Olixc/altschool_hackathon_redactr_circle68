@@ -1,6 +1,10 @@
 .header{
+  display:flex;
+  align-items:center;
   position:sticky;
+  background-color:var(--white-color);
   top:0;
+  height: 70px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 .header__itemContainer{
@@ -10,9 +14,9 @@
   display:flex;
   align-items:center;
 }
-.header__left{
+.header__left > a{
   display:flex;
-  column-gap:1
+  align-items:center;
 }
 .header__right {
   position: fixed;
@@ -60,7 +64,6 @@
   text-decoration:none;
   color:var(--text-color);
   font-weight: 700;
-  font-size: 20px;
   line-height: 27px;
 }
 .header__bar{
@@ -79,27 +82,27 @@
   top: 45%;
   width: 26px;
   height: 3px;
-  background-color:var(--title-text-color);
+  background-color:var(--secondary-color);
   transition:all 0.4s ease-in-out;
 }
 .header__bar--burger::before{
   content: '';
   position: absolute;
-  top: -6px;
+  top: -8px;
   right: 0;
   width: 20px;
   height: 3px;
-  background-color:var(--title-text-color);
+  background-color:var(--secondary-color);
   transition:all 0.4s ease-in-out;
 }
 .header__bar--burger::after{
   content: '';
   position: absolute;
-  top: 6px;
+  top: 8px;
   right:0;
   width: 20px;
   height: 3px;
-  background-color:var(--title-text-color);
+  background-color:var(--secondary-color);
   transition:all 0.4s ease-in-out;
 }
 
@@ -107,7 +110,7 @@
   transform: rotate(720deg);
 }
 .header__bar--burger.open::before{
-  width:28px;
+  width:26px;
   transform: rotate(90deg) translate(8px, 0);
 }
 .header__bar--burger.open::after{
@@ -122,6 +125,9 @@
     position: unset;
     width: fit-content;
     opacity: 1;
+    height:70px;
+    display:flex;
+    align-items:center;
   }
   .header__nav{
     visibility:visible;
@@ -130,14 +136,22 @@
     height: unset;
     transform: translateY(0);
     flex-flow: row wrap;
-    column-gap: 1em;
+    column-gap: 1.2em;
     align-items: center;
+    height:100%;
   }
   .header__listItem{
     transform: translate(0);
+    height:100%;
+    display:flex;
+    align-items:center;
+    border-bottom: 4px solid transparent;
+  }
+  .header__listItem.active{
+    border-bottom-color:var(--secondary-color);
   }
   .header__link{
-    font-size: 1.2rem;
+    font-size: 2rem;
     padding:unset;
   }
   

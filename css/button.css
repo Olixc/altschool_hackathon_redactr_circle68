@@ -1,5 +1,5 @@
-.btn:link,
-.btn:visited
+.main__btn:link,
+.main__btn:visited
 {
   padding: 15px 40px;
   border: none;
@@ -14,17 +14,17 @@
   position: relative;
 }
 
-.btn:hover {
+.main__btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
 
-.btn:active {
+.main__btn:active {
   transform: translateY(-1px);
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
-.btn::after {
+.main__btn::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -38,7 +38,7 @@
   transition: all .4s;
 }
 
-.btn:hover::after {
+.main__btn:hover::after {
   transform: scaleX(1.2) scaleY(1.4);
   opacity: 0;
 }

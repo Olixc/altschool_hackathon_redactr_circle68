@@ -15,6 +15,7 @@
   <body>
     <header class="header">
       <!--         <div class="header__content"></div> -->
+      <div class="header__itemContainer"">
       <div class="header__bar header__item">
         <span class="header__bar--burger"></span>
       </div>
@@ -25,7 +26,7 @@
       </div>
       <nav class="header__right header__item header__nav">
         <ul class="header__listContainer">
-          <li class="header__listItem">
+          <li class="header__listItem active">
             <a href="index.html" class="header__link">Home</a>
           </li>
           <li class="header__listItem">
@@ -39,11 +40,51 @@
           </li>
         </ul>
       </nav>
+      </div>
     </header>
 
     <div class="container">
       <main class="main">
-        <div class="main__content">main</div>
+        <div class="main__content">
+          <div class="main__left">
+            <h1 class="main__title">
+              Use <span class="main__title--redact">Redact</span
+              ><span class="main__title--app">App</span> to share & hide
+              specific words on every social media apps.
+            </h1>
+            <p class="main__text">
+              Safely share content on social media by scrambling portions of the
+              text you don’t want the world to read/see.
+            </p>
+            <a href="redact.html" class="main__btn">
+              <span class="main__btn--text">Try RedactApp</span>
+              <span class="main__btn--icon">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+          <div class="main__right">
+            <img
+              class="main__right--img"
+              src="./images/hero_shape.png"
+              alt="main-img"
+            />
+            <div class="card__tweet">
+              <div class="card__tweet--header">
+                <a href="redact.html" class="main__btn">Share on twitter</a>
+                <i class="fab fa-twitter"></i>
+              </div>
+              <hr />
+              <!-- text -->
+              <p>
+                I hope you’re well. Can we catch up today? I’d ******** your
+                input on my presentation. I know how hard it is to come up with
+                ***** that can suit and meet the need. Anways I will be
+                expecting you as always.
+              </p>
+            </div>
+          </div>
+        </div>
       </main>
 
       <section class="about">
@@ -55,7 +96,7 @@
       </section>
 
       <section class="social">
-        <section class="social__content"></section>
+        <section class="social__content">social</section>
       </section>
 
       <footer class="footer">
